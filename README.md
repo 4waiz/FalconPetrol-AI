@@ -31,9 +31,9 @@ FalconPatrol AI is a smart surveillance system using Boston Dynamics Spot Dog an
 ```bash
 git clone https://github.com/4waiz/FalconPetrol-AI.git
 cd FalconPetrol-AI/ai_model/yolov5
-
+```
 2. Create virtual env and install
-
+```
 bash
 Copy
 Edit
@@ -41,17 +41,18 @@ python3 -m venv venv
 source venv/bin/activate
 pip install --break-system-packages -r requirements.txt
 Add your video as test_video.mp4
-
+```
 3. Run detection
-
-bash
+```bash
 Copy
 Edit
 python detect.py --source test_video.mp4 --weights yolov5s.pt
+```
 
-4.Run the dashboard
+4. Run the dashboard
 
-bash
+```bash
 Copy
 Edit
 streamlit run dashboard.py
+```
