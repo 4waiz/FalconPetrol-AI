@@ -34,9 +34,6 @@ cd FalconPetrol-AI/ai_model/yolov5
 ```
 2. Create virtual env and install
 ```
-bash
-Copy
-Edit
 python3 -m venv venv
 source venv/bin/activate
 pip install --break-system-packages -r requirements.txt
@@ -44,15 +41,11 @@ Add your video as test_video.mp4
 ```
 3. Run detection
 ```bash
-Copy
-Edit
-python detect.py --source test_video.mp4 --weights yolov5s.pt
+python detect.py --source test_video.mp4 --weights yolov5s.pt --conf 0.5
 ```
 
 4. Run the dashboard
 
 ```bash
-Copy
-Edit
 streamlit run dashboard.py
 ```
