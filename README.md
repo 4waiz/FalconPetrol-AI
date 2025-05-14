@@ -3,6 +3,7 @@
 FalconPatrol AI is a smart surveillance system using Boston Dynamics Spot Dog and real-time AI detection to monitor restricted areas. It detects unusual human activity, records video, and sends alerts to a cloud dashboard and mobile app.
 
 > Built as part of the NextGen Industry Challenge to support the UAE's vision of smart, secure infrastructure.
+[![Watch the video](https://img.youtube.com/vi/KhnNkMcIaIg/maxresdefault.jpg)](https://youtu.be/KhnNkMcIaIg)
 
 ---
 
