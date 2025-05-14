@@ -42,6 +42,9 @@ Add your video as test_video.mp4
 3. Run detection
 ```bash
 python detect.py --source test_video.mp4 --weights yolov5s.pt --conf 0.5
+
+Extract images 
+python extract_frames.py
 ```
 
 4. Run the dashboard
