@@ -8,48 +8,50 @@ FalconPatrol AI is a smart surveillance system using Boston Dynamics Spot Dog an
 ---
 
 ## 🎯 Features
-- 🧠 Real-time AI detection with YOLOv5
-- 🤖 Autonomous patrol using Spot Dog
-- 📷 Captures and logs intruder activity
-- 📲 Fake cloud dashboard + alert system (Streamlit)
-- ✅ Easy to demo using local video footage
+- 🧠 Real-time AI detection with YOLOv5 (Human detection)
+- 🤖 Remote control of Boston Dynamics Spot robot (Dock/Undock, Stand/Sit, Move)
+- 📷 Captures and logs intruder activity with timestamp, image & location
+- 🌐 Web dashboard built with React + FastAPI backend
+- ☁️ Simulated cloud alert system with local logs (Alert Log)
 
 ---
 
 ## 🛠️ Tech Stack
-| Component     | Tools Used                   |
-|---------------|------------------------------|
-| AI Detection  | Python, YOLOv5, OpenCV       |
-| Dashboard     | Streamlit                    |
-| Cloud Sim     | Fake push alert & logs       |
-| Video Input   | YouTube test video           |
+
+| Component     | Tools Used                           |
+| ------------- | ------------------------------------ |
+| Backend API   | Python, FastAPI, Boston Dynamics SDK |
+| Frontend UI   | React, Tailwind CSS                  |
+| AI Detection  | YOLOv5, OpenCV, Torch                |
+| Robot Control | Spot SDK: Estop, Lease, Docking APIs |
+| Image Logging | Local Storage (Saved Alerts)         |
 
 ---
 
 ## 🖥️ Run Locally
 
-1. Clone the repo
-```bash
-git clone https://github.com/4waiz/FalconPetrol-AI.git
-cd FalconPetrol-AI/ai_model/yolov5
+🔧 1. Clone the repository
 ```
-2. Create virtual env and install
+git clone https://github.com/4waiz/FalconPetrol-AI.git
+cd FalconPetrol-AI
+```
+🐍 2. Set up Python virtual environment
 ```
 python3 -m venv venv
 source venv/bin/activate
 pip install --break-system-packages -r requirements.txt
-Add your video as test_video.mp4
 ```
-3. Run detection
-```bash
-python detect.py --source test_video.mp4 --weights yolov5s.pt --conf 0.5
-
-Extract images 
-python extract_frames.py
+3. 🚀 Start the FastAPI Backend
+```
+run in your venv
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-4. Run the dashboard
+4. 🌐 Start the React Frontend
 
-```bash
-streamlit run dashboard.py
+```
+In terminal 2
+cd frontend
+npm install
+npm run dev
 ```
